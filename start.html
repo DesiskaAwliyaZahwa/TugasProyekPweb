@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Start</title>
+</head>
+<body>
+	<style type="text/css">
+		body {
+            text-align: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+		h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-top: 5px;
+            padding-bottom: 15px;
+            color: yellow;
+        }
+
+        nav {
+            padding: 2px;
+            border-radius: 7px;
+            box-shadow: 0 0 30px yellow;
+        }
+
+         .header{
+            grid-area: header; 
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+            -webkit-text-stroke: 2px yellow; 
+            -webkit-text-fill-color: transparent;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+		.container{
+			display: flex;
+			justify-content: space-around;
+			width: 90%;
+
+			/*untuk rata tengah container*/
+			position: absolute;
+			top: 90%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.box{
+			width: 300px;
+			height: 450px;
+			cursor: pointer;
+			position: relative;
+			box-shadow: 0 16px 32px black;
+			transition: all 0.2s ease-in;
+			border-radius: 5px;
+			overflow: hidden;
+		}
+
+		.box::before{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(to bottom, rgba(0,0,0,0.1)20%, rgba(0,0,0,0.3)30%, rgb(0,0,0));
+			opacity: 0;
+			transition: all 0.3s;
+		}
+
+		p{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			font-family: verdana;
+			font-size: 22px;
+			font-weight: bolder;
+			white-space: nowrap;
+			color: white;
+			margin: 0;
+			transition: all 0.3s;
+			text-transform: uppercase;
+		}
+		.box img{
+			width: 100%;
+			height: 100%;
+		}
+
+		.box:hover{
+			transform: translateY(-20px);
+		}
+
+		.box:hover::before{
+			opacity: 1;
+		}
+		.box:hover p{
+			transform: translate(-50%, -60px);
+		}
+	</style>
+	<center>
+		<nav>
+			<br><br>
+			<h1>Silakan Klik </h1>
+			<h1>Pada Salah Satu Gambar di Bawah</h1>
+		</nav>
+		<br>
+		<div class="header">
+           Gambar 1 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Gambar 2
+        </div>
+	</center>
+	<div class="container">
+		<div class="box">
+			<img src="pict.jpg">
+			<p><a href="http://localhost/projek1/profile.php" style="color: #ff0">Profil</a></p>
+		</div>
+		<div class="box">
+			<img src="gallery.jpg">
+			<p><a href="http://localhost/projek1/gallery1.php" style="color: #ff0">Gallery</a></p>
+		</div>
+	</div>
+</body>
+</html>
