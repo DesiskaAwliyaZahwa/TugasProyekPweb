@@ -22,7 +22,7 @@
         $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
         if($sql){ // Cek jika proses simpan ke database sukses atau tidak
           // Jika Sukses, Lakukan :
-          header("location: busan.php"); // Redirectke halaman index.php
+          header("location: busan.php"); // Redirectke halaman busan.php
         }
         else{
           // Jika Gagal, Lakukan :
