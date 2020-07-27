@@ -3,7 +3,7 @@
   // Load file koneksi.php
   include "koneksi.php";
   
-  // Ambil Data yang Dikirim dari Form
+  // Ambil data yang dikirim dari form
   $nama_file = $_FILES['gambar']['name'];
   $ukuran_file = $_FILES['gambar']['size'];
   $tipe_file = $_FILES['gambar']['type'];
@@ -23,7 +23,7 @@
         $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
         if($sql){ // Cek jika proses simpan ke database sukses atau tidak
           // Jika Sukses, Lakukan :
-          header("location: jogja.php"); // Redirectke halaman index.php
+          header("location: jogja.php"); // Redirectke halaman jogja.php
         }
         else{
           // Jika Gagal, Lakukan :
@@ -35,7 +35,7 @@
         // Jika gambar gagal diupload, Lakukan :
         echo "Maaf, Gambar gagal untuk diupload.";
         echo "<br><a href='form1.php'>Kembali Ke Form</a>";
-      }
+    
     }
     else{
       // Jika ukuran file lebih dari 1MB, lakukan :
